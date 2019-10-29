@@ -2,6 +2,8 @@
 
 Loan Calculator
 
+Check out the site ## [Loan Calculator](https://react-loan-calc.herokuapp.com)
+
 ## About
 
 This is a simple loan calculator where user can input loan amount and duration with slider and get the result of interest rate and number of payments to be made. This application is built with React.
