@@ -1,68 +1,74 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Project Title
 
-## Available Scripts
+Loan Calculator
 
-In the project directory, you can run:
+## About
 
-### `yarn start`
+This is a simple loan calculator where user can input loan amount and duration with slider and get the result of interest rate and number of payments to be made. This application is built with React.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![Loan Calculator GIF](https://github.com/Dibash7/Loan-Calculator/blob/master/loan-calc.gif)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### Prerequisites
 
-### `yarn test`
+Make sure you have installed all of the following prerequisites on your development machine:
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* Git - Download & Install Git. OSX and Linux machines typically have this already installed.
+* Node.js - Download & Install Node.js and the npm package manager. If you encounter any problems, you can also use this GitHub Gist to install Node.js.
 
-### `yarn build`
+### Downloading the project
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+There are several ways you can get this project:
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+#### Cloning The GitHub Repository
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The recommended way to get this project is to use git to directly clone the repository:
 
-### `yarn eject`
+```
+https://github.com/Dibash7/Loan-Calculator.git 
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+This will clone the latest version of the Loan Calculator repository to a folder.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### Downloading The Repository Zip File
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Another way to use the project is to download a zip copy from the master branch on GitHub.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Quick Install
 
-## Learn More
+Once you've downloaded the project and installed all the prerequisites, you're just a few steps away from starting to develop your Loan Calculator application.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The boilerplate comes pre-bundled with a package.json file that contain the list of modules you need to start your application.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+To install the dependencies, run this in the application folder from the command-line:
 
-### Code Splitting
+```
+npm install
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+This command does a few things:
+* First it will install the dependencies needed for the application to run.
+* If you're running in a development environment, it will then also install development dependencies needed for testing and running your application.
+* To update these packages later on, just run `npm update`
 
-### Analyzing the Bundle Size
+## Running Your Application
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+Run your application using terminal:
 
-### Making a Progressive Web App
+```
+npm start
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+Your application should run on port 3000 with the development environment configuration, so in your browser just go to http://localhost:3000
 
-### Advanced Configuration
+## Authors
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+* **Dibash Majumder** - [Dibash7](https://github.com/Dibash7)
 
-### Deployment
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+## License
 
-### `yarn build` fails to minify
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Acknowledgments
+
+* 
