@@ -1,7 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
-import { fontSize } from "@material-ui/system";
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -30,11 +29,6 @@ const Input = props => {
   const handleChange = name => event => {
     setValues({ ...values, [name]: event.target.value });
   };
-
-  // const inputStyle = {
-  //   display: "flex",
-  //   flexDirection: "row"
-  // };
 
   return (
     <form className={classes.container} noValidate autoComplete="off">

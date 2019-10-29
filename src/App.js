@@ -2,6 +2,7 @@ import React from "react";
 import CustomSlider from "./components/Slider";
 import Sidebar from "./components/Sidebar";
 import Container from "./components/Container";
+import Header from "./components/Header";
 import shortid from "shortid";
 import axios from "axios";
 import styled from "styled-components";
@@ -67,8 +68,6 @@ class App extends React.Component {
   }
 
   handleUpdatePreviousCalculation = id => {
-    // console.log(e);
-    // console.log(id);
     const index = this.state.previous.findIndex(x => x.id === id);
 
     this.setState({
@@ -76,11 +75,9 @@ class App extends React.Component {
       duration: this.state.previous[index].duration,
       result: this.state.previous[index].result
     });
-
-    console.log(this.state);
   };
 
-  handleSaveCalculation = () =>
+  handleSaveCalculation = () => {
     this.setState({
       previous: [
         ...this.state.previous,
@@ -92,6 +89,10 @@ class App extends React.Component {
         }
       ]
     });
+    localStorage.setItem("loanAmount", this.state.loan);
+    localStorage.setItem("durationAmount", this.state.duration);
+    localStorage.setItem("id", shortid());
+  };
 
   handleCalculate = () => {
     var self = this;
@@ -100,7 +101,7 @@ class App extends React.Component {
       loading: true
     });
     const URL = `https://ftl-frontend-test.herokuapp.com/interest?amount=${this.state.loan}&numMonths=${this.state.duration}`;
-    // Make a request for a user with a given ID
+
     axios
       .get(URL)
       .then(({ data }) => {
@@ -137,30 +138,19 @@ class App extends React.Component {
   render() {
     return (
       <AppContext.Provider value={{ ...this.state }}>
-        <div className="App">
+        <div id="App">
           <Sidebar
             prevUpdate={this.handleUpdatePreviousCalculation}
             pageWrapId={"page-wrap"}
             outerContainerId={"App"}
           />
           <div id="page-wrap">
-            <header class="header">
-
-              <div class="text-box">
-                <h1 class="heading-primary">
-                  <span class="heading-primary-main">Hey There</span>
-                  <span class="heading-primary-sub">Click the below button</span>
-                </h1>
-                <a href="#loan" class="btn btn-white btn-animated">
-                  Calculate Loan
-                </a>
-              </div>
-            </header>
+            <Header />
             <h2>
               Change sliders and calculate to get interest and duration of
               payments
             </h2>
-            <menu id="loan" className="menu">
+            <menu id="loan">
               <div style={inputStyle}>
                 <CustomSlider propName="loan" text={"Loan Amount"} />
                 <CustomSlider propName="duration" text={"Repayment Duration"} />
@@ -175,11 +165,11 @@ class App extends React.Component {
                   <h2>Interest Rates Calculations</h2>
                   <p />
                   <p />
-                  <p style={{ fontWeight: "bold" }}>Interest Rate</p>:{" "}
+                  <h3 style={{ fontWeight: "bold" }}>Interest Rate</h3>:{" "}
                   {this.state.result.interestRate}
-                  <p style={{ fontWeight: "bold" }}>
+                  <h3 style={{ fontWeight: "bold" }}>
                     Number of Payments
-                  </p> : {this.state.result.numPayments}
+                  </h3> : {this.state.result.numPayments}
                 </React.Fragment>
               ) : (
                 ""

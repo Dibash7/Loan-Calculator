@@ -5,7 +5,7 @@ export class Calendar extends React.Component {
   constructor() {
     super();
 
-    var today = new Date(),
+    let today = new Date(),
       date =
         today.getFullYear() +
         "-" +

@@ -1,6 +1,6 @@
 import React from "react";
 import { AppContext } from "../App";
-import Calendar from './Calendar';
+import Calendar from "./Calendar";
 
 const Container = props => {
   let previousStyle = {
@@ -17,23 +17,10 @@ const Container = props => {
     cursor: "pointer",
     transition: "2s",
     backgroundColor: "#ed748a",
-    borderRadius: "20px 20px"
+    borderRadius: "20px 20px",
+    boxShadow: "-5px 10px 26px 2px rgba(107,20,107,1)"
   };
 
-  let dt = new Date();
-  let DD = ("0" + dt.getDate()).slice(-2);
-  let MM = ("0" + (dt.getMonth() + 1)).slice(-2);
-  let YYYY = dt.getFullYear();
-  let hh = ("0" + dt.getHours()).slice(-2);
-  let mm = ("0" + dt.getMinutes()).slice(-2);
-  let ss = ("0" + dt.getSeconds()).slice(-2);
-  let date_string = YYYY + "-" + MM + "-" + DD + " " + hh + ":" + mm + ":" + ss;
-
-  // const containerUpdate = (e, x) => {
-  //   console.log(e.target.value);
-  //   console.log(props);
-
-  // };
   return (
     <AppContext.Consumer>
       {context => {
@@ -47,12 +34,11 @@ const Container = props => {
           >
             {context.previous.map((x, id) => {
               return (
-                <div>
+                <div key={id}>
                   <div
                     onClick={e => props.prevUpdate(x.id)}
                     style={{
                       ...previousStyle
-                      
                     }}
                     key={id}
                   >
