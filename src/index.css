@@ -5,6 +5,22 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* background:linear-gradient(
+      rgba(50, 110, 160, 0.6),
+      rgba(109, 149, 212, 0.7)
+    ),  url("./loan-bg.jpg");
+  background-size: cover; */
+  background-image:linear-gradient(to right bottom, 
+     rgba(76, 255, 130, 0.8),
+     rgba(19, 189, 124, 0.705)),
+     url('https://source.unsplash.com/collection/190727/1600x900');
+  	
+	  background-size: cover;
+  	background-position: top;
+    	font-weight: 400;
+  	font-size: 16px;
+  	line-height: 1.7;
+  	color: #eee;
 }
 
 code {
