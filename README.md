@@ -2,7 +2,8 @@
 
 Loan Calculator
 
-Check out the site ## [Loan Calculator](https://react-loan-calc.herokuapp.com)
+Check out the site 
+## [Loan Calculator](https://react-loan-calc.herokuapp.com)
 
 ## About
 
